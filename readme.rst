@@ -1,3 +1,5 @@
+|travis|
+
 splinart is a package used for a tutorial which explains how to do the Python packaging using
 
 - `PyPi <https://pypi.python.org/pypi>`_
@@ -17,3 +19,7 @@ If you want to install splinart::
 or::
 
     conda install -c gouarin splinart
+
+.. |travis| image:: https://travis-ci.org/mregnault/splinart.svg?branch=master
+   :target: https://travis-ci.org/gouarin/splinart
+
