@@ -1,4 +1,3 @@
-%%file environment.yml
 name: splinart
 dependencies:
   - notebook

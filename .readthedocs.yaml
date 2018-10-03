@@ -1,4 +1,3 @@
-%%file .readthedocs.yml
 conda:
    file: doc/environment.yml
 requirements_file: requirements.txt
