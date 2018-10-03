@@ -1,0 +1,26 @@
+# Configure appveyor for builds.
+
+environment:
+  matrix:
+    - TARGET_ARCH: "x64"
+      CONDA_INSTALL_LOCN: "C:\\Miniconda-x64"
+    - TARGET_ARCH: "x64"
+      CONDA_INSTALL_LOCN: "C:\\Miniconda35-x64"
+    - TARGET_ARCH: "x64"
+      CONDA_INSTALL_LOCN: "C:\\Miniconda36-x64"
+
+platform:
+    - x64
+
+install:
+    # No need to install miniconda because appveyor comes with it.
+    - cmd: SET PATH=%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\Scripts;%PATH%
+
+    - cmd: conda config --set always_yes true
+    - cmd: pip install -r requirements.txt
+
+build: off
+
+test_script:
+    - python setup.py install
+    - pytest --cov splinart
