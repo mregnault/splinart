@@ -36,7 +36,7 @@ install:
 
 script:
   - pytest --pylint --pylint-rcfile=.pyrcfile --pylint-error-types=EF splinart
-  - cd splinart
+  - cd pytest
   - pytest --cov splinart
 
 after_success:
